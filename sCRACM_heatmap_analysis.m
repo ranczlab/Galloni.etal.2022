@@ -4,11 +4,12 @@ clc
 %% Plotting parameters
 
 plot_type = 'heatmap';     % Options: 'heatmap','profile','total_input','morphology'
-input = 'ACA';             % Options: 'all','RSP','VISp','V2','ORB','LP','ATN','ACA'
+input = 'ACA';             % Options: 'RSP','VISp','V2','ORB','LP','ATN','ACA'
 analysed_cell = 'all';     % Options: 'all', or enter cell number to see a particular cell
-alignment = 'soma';         % Options: 'soma','pia','all'
+alignment = 'soma';        % Options: 'soma','pia'
 cutoff = 7;                % filter signals smaller than cutoff * SD
 
+% Requires alignment = 'soma' for correct morphology convolution:
 tuft_only = 0;          
 oblique_only = 0;
 basal_only = 0;
@@ -17,7 +18,7 @@ basal_only = 0;
 correlation_depth = 0;     % Plot soma depth vs peak location
 correlation_total = 0;     % Plot total input vs peak location
 
-stacked_heatmaps = 1;      % Show heatmaps for all cells side-by-side
+stacked_heatmaps = 0;      % Show heatmaps for all cells side-by-side
 projection = 'h';          % Options: 'v' = vertical,'h' = horizontal
 sort_by = 'peakloc';       % Options: 'depth','total','peakloc','location','mediolateral','allen_slice'
 
